@@ -1,0 +1,9 @@
+#mycard{
+    display: flex;
+    justify-content: space-between;
+}
+
+#usingbootstrap{
+    display: flex;
+   
+}
