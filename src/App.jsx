@@ -152,177 +152,458 @@
 // image in react + nav bar
 
 //navbar 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-
-//CAROUSELS
-import Carousel from 'react-bootstrap/Carousel';
-
-// image in react 
-import im from "./images/i1.jpg"
-import imm from "./images/i3.jpg"
-import immm from "./images/i2.jpg"
-
-//card 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-
-import t from "./images/taj1.jpg"
-import t1 from "./images/taj2.jpg"
-import t2 from "./images/taj3.jpg"
-
-// if you want rows and cols 
 // import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+
+
+// //CAROUSELS
+// import Carousel from 'react-bootstrap/Carousel';
+
+ // image in react 
+// import im from "./images/i1.jpg"
+// import imm from "./images/i3.jpg"
+// import immm from "./images/i2.jpg"
+
+// //card 
+// import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+
+// import t from "./images/taj1.jpg"
+// import t1 from "./images/taj2.jpg"
+// import t2 from "./images/taj3.jpg"
+
+// // if you want rows and cols 
+// // import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// const App=()=>{
+//   return(
+    
+//     <>
+    
+//      <Navbar bg="dark" data-bs-theme="dark">
+//         <Container>
+//           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+//           <Nav className="me-auto">
+//             <Nav.Link href="#home">Home</Nav.Link>
+//             <Nav.Link href="#About">About</Nav.Link>
+//             <Nav.Link href="#Services">Book</Nav.Link>
+//             <Nav.Link href="#home">Latest info</Nav.Link>
+//             <Nav.Link href="#About">Features</Nav.Link>
+//             <Nav.Link href="#Services">Pricing</Nav.Link>
+//           </Nav>
+//         </Container>
+//       </Navbar>
+
+
+//  {/* CAROUSELS */}
+
+//  <Carousel>
+//       <Carousel.Item>
+//       <img src={im} alt=""  width="100%" height="500"/>
+//         <Carousel.Caption>
+//           <h3>First slide label</h3>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//       <img src={imm} alt="" width="100%" height="500" />
+//         <Carousel.Caption>
+//           <h3>Second slide label</h3>
+//           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//       <img src={immm} alt="" width="100%" height="500"/>
+//         <Carousel.Caption>
+//           <h3>Third slide label</h3>
+//           <p>
+//             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+//           </p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//     </Carousel>
+
+
+// {/* if you want rows cols from bootstrap */}
+// <div id="usingbootstrap">
+//     <Container fluid="md">
+//       <Row>
+//         <Col>
+//         <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top" src={t2} />
+//       <Card.Body>
+//         <Card.Title>Card Title</Card.Title>
+//         <Card.Text>
+//           Some quick example text to build on the card title and make up the
+//           bulk of the card's content.
+//         </Card.Text>
+//         <Button variant="primary">Go somewhere</Button>
+//       </Card.Body>
+//     </Card>
+//     </Col>
+// {/* card1 */}
+
+// <Col>
+// <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top" src={t} />
+//       <Card.Body>
+//         <Card.Title>Card Title</Card.Title>
+//         <Card.Text>
+//           Some quick example text to build on the card title and make up the
+//           bulk of the card's content.
+//         </Card.Text>
+//         <Button variant="primary">Go somewhere</Button>
+//       </Card.Body>
+//     </Card>
+//     </Col>
+//     {/* card1 */}
+//     <Col>
+// <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top" src={t1} />
+//       <Card.Body>
+//         <Card.Title>Card Title</Card.Title>
+//         <Card.Text>
+//           Some quick example text to build on the card title and make up the
+//           bulk of the card's content.
+//         </Card.Text>
+//         <Button variant="primary">Go somewhere</Button>
+//       </Card.Body>
+//     </Card>
+//         </Col>
+//       </Row>
+//     </Container>
+
+//     </div>
+// <div id="mycard">
+// {/* card */}
+
+// {/* card1 */}
+
+// <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top" src={t2} />
+//       <Card.Body>
+//         <Card.Title>Card Title</Card.Title>
+//         <Card.Text>
+//           Some quick example text to build on the card title and make up the
+//           bulk of the card's content.
+//         </Card.Text>
+//         <Button variant="primary">Go somewhere</Button>
+//       </Card.Body>
+//     </Card>
+
+// {/* card1 */}
+
+// <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top" src={t} />
+//       <Card.Body>
+//         <Card.Title>Card Title</Card.Title>
+//         <Card.Text>
+//           Some quick example text to build on the card title and make up the
+//           bulk of the card's content.
+//         </Card.Text>
+//         <Button variant="primary">Go somewhere</Button>
+//       </Card.Body>
+//     </Card>
+
+//     {/* card1 */}
+
+// <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top" src={t1} />
+//       <Card.Body>
+//         <Card.Title>Card Title</Card.Title>
+//         <Card.Text>
+//           Some quick example text to build on the card title and make up the
+//           bulk of the card's content.
+//         </Card.Text>
+//         <Button variant="primary">Go somewhere</Button>
+//       </Card.Body>
+//     </Card>
+//     </div>
+// </>
+// )
+
+// }
+// export default App;
+
+
+
+// WEBSITE
+
+//nav bar
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+
+//  // CAROUSELS 
+// import Carousel from 'react-bootstrap/Carousel';
+
+// //images 
+//  import im from "./images/tata4.jpg"
+//  import imm from "./images/tata9.jpg"
+//  import immm from "./images/tata2.jpg"
+//  import immmm from "./images/tata1.jpg"
+
+
+//  //card 
+//  import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+
+
+// // images for card 
+// import t from "./images/tata5.jpg"
+// import t1 from "./images/tata6.jpg"
+// import t2 from "./images/tata7.jpg"
+// import t3 from "./images/tata8.jpg"
+
+
+// // rows cols 
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// const App=()=>{
+//     return(
+//       <>
+//       <Navbar bg="dark" data-bs-theme="dark">
+//         <Container>
+//           <Navbar.Brand href="#home">TATA MOTORS <br /> <Nav.Link href="#home"> Connecting aspiration </Nav.Link></Navbar.Brand>
+//           <Nav id="me-auto">
+//             <Nav.Link href="#home">Future of mobality</Nav.Link>
+//             <Nav.Link href="#features">Organization</Nav.Link>
+//             <Nav.Link href="#pricing">Business</Nav.Link>
+//             <Nav.Link href="#pricing">Cooperate responsibility</Nav.Link>
+//             <Nav.Link href="#pricing">Investors</Nav.Link>
+//             <Nav.Link href="#pricing">Newsroom</Nav.Link>
+//             <Nav.Link href="#pricing">Careers</Nav.Link>
+//           </Nav>
+//         </Container>
+//       </Navbar>
+
+//     {/* CAROUSELS */}
+
+//     <Carousel>
+//        <Carousel.Item>
+//        <img src={im} alt=""  width="100%" height="500"/>
+//          <Carousel.Caption>
+//            <h3>Padma Vibhushan</h3>
+//            <p>
+// Mr. Ratan N Tata
+// 28.12.1937 – 09.10.2024
+// <br />
+// Read Note</p>
+//          </Carousel.Caption>
+//        </Carousel.Item>
+//        <Carousel.Item>
+//        <img src={imm} alt="" width="100%" height="500" />
+//          <Carousel.Caption>
+//            <h3>A spotLight on Sustaniblity</h3>
+//            <p>Read More</p>
+//          </Carousel.Caption>
+//        </Carousel.Item>
+//        <Carousel.Item>
+//        <img src={immm} alt="" width="100%" height="500"/>
+//          <Carousel.Caption>
+//            <h3>Tommorrows Choice ,
+//             <br /> Today
+//            </h3>
+//            <p>
+//            Read More
+//           </p>
+//          </Carousel.Caption>
+//        </Carousel.Item>
+//        <Carousel.Item>
+//        <img src={immmm} alt="" width="100%" height="500"/>
+//          <Carousel.Caption>
+//            <h3>Embarcing clean mobality </h3>
+//            <p>
+//            Read More
+//           </p>
+//          </Carousel.Caption>
+//        </Carousel.Item>
+//     </Carousel>
+
+// <br /> <br /> <br /> <br /> <br />
+//   {/* card */}
+
+//   <Container>
+//       <Row>
+//         <Col>
+    
+   
+
+//     <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top"  src={t1} />
+//       <Card.Body>
+//         <Card.Title>Building for the Progress</Card.Title>
+//         <Card.Text>
+         
+//         </Card.Text>
+//         <Button variant="primary">Explore</Button>
+//       </Card.Body>
+//     </Card>
+
+//     </Col>
+
+//     <Col>
+//     <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top"  src={t2} />
+//       <Card.Body>
+//         <Card.Title>Future ready begins Here</Card.Title>
+//         <Card.Text>
+          
+//         </Card.Text>
+//         <Button variant="primary">Explore</Button>
+//       </Card.Body>
+//     </Card>
+//     </Col>
+
+//     <Col>
+//     <Card style={{ width: '18rem' }}>
+//       <Card.Img variant="top"  src={t3} />
+//       <Card.Body>
+//         <Card.Title>The electric Advantge</Card.Title>
+//         <Card.Text>
+         
+//         </Card.Text>
+//         <Button variant="primary">Explore</Button>
+//       </Card.Body>
+//     </Card>
+//     </Col>
+//     </Row>
+//     </Container>
+// <div style={{background:"grey"}} >
+//   <div id="footer" >
+//     <p>
+//     <ul style={{textDecoration:"none",listStyle:"none" , paddingTop:"3%"}}> 
+//       <h5>
+//    <li style={{color:"black"}}>Future of mobality</li> </h5>
+//    <li  style={{paddingTop:"5%", color:"white"}}>Business</li>
+//    <li  style={{paddingTop:"5%", color:"white"}}>Commercial vehicles </li>
+//    <li style={{paddingTop:"1%",color:"white"}}>
+// Passenger vehicles
+//    </li>
+//    <li style={{paddingTop:"1%",color:"white"}}>Electric vehicles</li>
+//    <li style={{paddingTop:"1%" , color:"white"}}>
+//    Luxury vehicles</li>
+//  </ul>
+//       </p>
+      
+//       <p>
+//         <ul style={{textDecoration:"none",listStyle:"none" , paddingTop:"3%", paddingLeft:"35%"}}>
+//         <h5>
+//           <li style={{color:"black"}}>Organisation</li></h5>
+//           <li style={{paddingTop:"3%",color:"white"}}>Overview</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>About us</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Our history</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Our leadership</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Our global presence</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Subsidiaries and other entities</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Innovations</li>
+//         </ul>
+//       </p>
+      
+//       <p>
+//         <ul style={{textDecoration:"none",listStyle:"none" , paddingTop:"3%", paddingLeft:"35%"}}>
+//         <h5>
+//            <li style={{color:"black"}}>Cooperate Responsibility</li>
+//            </h5>
+//           <li style={{paddingTop:"3%",color:"white"}}>Overview</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Planet</li>
+//           <li style={{paddingTop:"1%",color:"white"}}> Governance</li>
+//         </ul>
+//       </p>
+
+//       <p>
+//         <ul style={{textDecoration:"none",listStyle:"none" , paddingTop:"3%", paddingLeft:"35%"}}>
+//         <h5>
+//           <li style={{color:"black"}}>Newsroom</li> </h5>
+//           <li style={{paddingTop:"3%",color:"white"}}>Overview</li>
+//           <li style={{paddingTop:"1%",color:"white"}}>Press releases</li>
+//           <li style={{paddingTop:"1%",color:"white"}}> Thought leadership
+//           Media library</li>
+//         </ul>
+//       </p>
+//       </div>
+//       <h5 style={{color:"black"}}>Social Media</h5>
+//       </div>
+    
+     
+//       </>
+//     )
+//   }
+
+//   export default App
+
+
+// EVENT IN REACT JS
+
+// const App=()=>{
+//   const display=()=>{
+//     alert("this is event in js")
+//   }
+//   return(
+//     <>
+//     <h1>Welcome</h1>
+//     <button onClick={display}>Click Here</button>
+//     </>
+    
+//         )
+// }
+// export default App;
+
+//PASSING ARGUMENT
+// const App=()=>{
+//   const Myname=(nm)=>{
+//     alert(`my name is ${nm}`);
+//   }
+//   return(
+//     <>
+//         <h1>Welcome</h1>
+//     <button onClick={()=>{Myname("ishika")}}></button>
+//     </>
+//   )
+// }
+// export default App;
+
+//IMP
+// const App=()=>{
+//   const display=(e)=>{
+//          alert("type of event" +" "+e.type+" "+"name of button "+ " "+e.target.name+" "+"value of button"+" "+e.target.value)
+//        }
+//        return(
+//         <>
+//          <h1>Welcome</h1>
+//          <button name="btn" value="mybtn" onClick={display}>Click Here</button>
+//          </>
+//          )
+// }
+// export default App;
+
+//taking input
+// const App=()=>{
+//   const myshow=(e)=>{
+//     //e is event obj
+//     console.log(e)
+//     console.log(e.target.value)
+//     console.log(e.target.name)
+//   }
+// return(
+// <>
+// Enter name < input  name="ishika" type="text" onClick={myshow}/>
+// </>
+// )
+// }
+// export default App;
+
+
 const App=()=>{
+  const display=(nm,e)=>{
+alert("name "+" "+nm+" "+"button name"+e.target.name+" "+"button value"+" "+e.target.value)
+  }
   return(
-    
     <>
-    
-     <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#About">About</Nav.Link>
-            <Nav.Link href="#Services">Book</Nav.Link>
-            <Nav.Link href="#home">Latest info</Nav.Link>
-            <Nav.Link href="#About">Features</Nav.Link>
-            <Nav.Link href="#Services">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-
-
- {/* CAROUSELS */}
-
- <Carousel>
-      <Carousel.Item>
-      <img src={im} alt=""  width="100%" height="500"/>
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={imm} alt="" width="100%" height="500" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={immm} alt="" width="100%" height="500"/>
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-
-
-{/* if you want rows cols from bootstrap */}
-<div id="usingbootstrap">
-    <Container fluid="md">
-      <Row>
-        <Col>
-        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={t2} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </Col>
-{/* card1 */}
-
-<Col>
-<Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={t} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </Col>
-    {/* card1 */}
-    <Col>
-<Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={t1} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-        </Col>
-      </Row>
-    </Container>
-
-    </div>
-<div id="mycard">
-{/* card */}
-
-{/* card1 */}
-
-<Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={t2} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-{/* card1 */}
-
-<Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={t} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-    {/* card1 */}
-
-<Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={t1} />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    </div>
-</>
-)
-
+    <button name="btn" value="mybtn" onClick={(e)=>{display("ishika",e)}}>Click </button>
+    </>
+  )
 }
 export default App;

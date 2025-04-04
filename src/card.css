@@ -7,3 +7,16 @@
     display: flex;
    
 }
+
+
+/* WEBSITE TATA MOTORS NAV BAR */
+
+.me-auto{
+    display: flex;
+    justify-content: center;
+}
+
+#footer{
+    display: flex;
+}
+
