@@ -1,5 +1,7 @@
 // TOPIC 1
 
+// import React, { useState } from "react";
+
 // const name="ishika"
 // const age=20
 // const salary=100000
@@ -596,13 +598,96 @@
 // export default App;
 
 
+// const App=()=>{
+//   const display=(nm,e)=>{
+// alert("name "+" "+nm+" "+"button name"+e.target.name+" "+"button value"+" "+e.target.value)
+//   }
+//   return(
+//     <>
+//     <button name="btn" value="mybtn" onClick={(e)=>{display("ishika",e)}}>Click </button>
+//     </>
+//   )
+// }
+// export default App;
+
+//FORM 
+//HOOK
+//changing  name using setName
+// const App=()=>{
+//   const[name,setName]=useState("Ishika");
+//   return(
+// <>
+// <h1>My name is {name}</h1>
+// <button onClick={()=>{setName("Jia")}}>Click me</button>
+// </>
+//   )
+// }
+// export default App;
+
+
+//changing  color using setColor
+// const App=()=>{
+//   const[color,setColor]=useState("red")
+// return(
+//   <>
+//   <h1 style={{color:color}}>Fav color:{color}</h1>
+//   <button onClick={()=>{setColor("green")}}>Green color</button>
+//   <button onClick={()=>{setColor("blue")}}>Blue color</button>
+//   <button onClick={()=>{setColor("orange")}}>Orange color</button>
+//   <button onClick={()=>{setColor("pink")}}>Pink color</button>
+//   </>
+// )
+// }
+// export default App;
+
+//create counter app //IMP INTERVIEW QUESTION
+// import { useState } from "react";
+// import { Button } from "react-bootstrap";
+// const App=()=>{
+//   const [cnt,setName]=useState(0);
+//   const mydec=()=>{
+//     if(cnt<=0){
+//       alert("Not less than zero!");
+//     }
+//     else{
+//       setName(cnt-1);
+//     }
+//   }
+//   return (
+//     <>
+//       <h1 align="center">My Counter App</h1>
+//       <div
+//         style={{
+//           border: "2px soild black",
+//           padding: "20px",
+//           borderRadius: "30px",
+//           backgroundColor: "lightGreen",
+//           width: "300px",
+//           margin: "auto",
+//         }}
+//       >
+//         <h1>My Count :{cnt}</h1>
+//         <button style={{color:"red"}} onClick={()=>{setName(cnt+1)}}>Incerment</button>
+//         <button onClick={mydec}>Decerment</button>
+//         <button onClick={()=>{setName(0)}}>Reset</button>
+//       </div>
+//     </>
+//   );
+// }
+// export default App;
+
+//imp useEffect
+import{useState,useEffect} from "react";
 const App=()=>{
-  const display=(nm,e)=>{
-alert("name "+" "+nm+" "+"button name"+e.target.name+" "+"button value"+" "+e.target.value)
-  }
+  const[count,setCount]=useState(0);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setCount(count+1);
+    },4000);
+  });
   return(
     <>
-    <button name="btn" value="mybtn" onClick={(e)=>{display("ishika",e)}}>Click </button>
+    <h1>Welcome:{count}</h1>
     </>
   )
 }
