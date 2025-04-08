@@ -1,5 +1,11 @@
 // TOPIC 1
 
+// const { useState } = require("react")
+// const { use } = require("react")
+
+// const { useState } = require("react")
+
+// import { useEffect } from "react";
 // import React, { useState } from "react";
 
 // const name="ishika"
@@ -677,17 +683,136 @@
 // export default App;
 
 //imp useEffect
-import{useState,useEffect} from "react";
+// import{useState,useEffect} from "react";
+// const App=()=>{
+//   const[count,setCount]=useState(0);
+//   useEffect(()=>{
+//     setTimeout(()=>{
+//       setCount(count+1);
+//     },4000);
+//   });
+//   return(
+//     <>
+//     <h1>Welcome:{count}</h1>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// type 1 useState
+// import { useState } from "react";
+// const App=()=>{
+//   const[count,setCount]=useState(0);
+//   //syntax od usestate
+
+// useState(()=>{
+//   setTimeout(()=>{setCount(count+1)},5000)
+
+// });
+
+// return(
+//   <>
+//   <h1>React Example:{count}</h1>
+//   </>
+// )
+// }
+// export default App;
+
+//type 2 useState [not working corect it]
+// import { useState } from "react";
+// const App=()=>{
+//   const[count,setCount]=useState(0);
+//   //syntax of usestate
+
+// useEffect(()=>{
+//   setTimeout(()=>{
+//     setCount(count+1);
+//   },5000)
+  
+// },[])
+// return(
+//   <>
+//   <h1>React Example:{count}</h1>
+//   </>
+// )
+// }
+// export default App;
+
+
+//type 3 useState
+// import { useEffect } from "react";
+// import { useState } from "react";
+// const App=()=>{
+//   const [count,setCount]=useState(0);
+//   const[multi,setMulti]=useState(0);
+//   useEffect(()=>{
+//     setMulti(count*2)
+//   },[count])
+//   return(
+//     <>
+//     <h1>My counter:{count}</h1>
+//     <h1>My mul:{multi}</h1>
+//     <button onClick={()=>{setCount(count+1)}}>ClickME</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+//form
+// import { useState } from "react";
+// const App=()=>{
+//   const[name,setName]=useState("")
+//   const[city,setCity]=useState("")
+  
+//   const handlesubmit=()=>{
+//     alert(`my name is ${name} city:${city}`)
+//   }
+//   return(
+//     <>
+//     <h1>Application Form</h1>
+//     name :<input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/>
+// city:<input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/>
+//     <button onClick={handlesubmit}>Submit</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+//form //impppppp
+import {useState} from "react";
+
 const App=()=>{
-  const[count,setCount]=useState(0);
-  useEffect(()=>{
-    setTimeout(()=>{
-      setCount(count+1);
-    },4000);
-  });
+  const[input,setInput]=useState({});
+
+  const handleInput=(e)=>{
+  let name=e.target.name;
+  let value=e.target.value;
+
+  setInput(values=>({...values,[name]:value}))
+  console.log(input)
+  }
+ 
   return(
     <>
-    <h1>Welcome:{count}</h1>
+    <h1>Application form</h1>
+    rollno: <input type="text" name="rollno" onChange={handleInput}/>
+    <br />
+    name: <input type="text" name="name" onChange={handleInput} />
+
+    <br />
+
+    <br />
+    city: <input type="text" name="city" onChange={handleInput} />
+
+    <br />
+    fees: <input type="text" name="fees" onChange={handleInput} />
+
+    <button >Save!!</button>
+
     </>
   )
 }
