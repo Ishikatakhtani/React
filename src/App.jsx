@@ -783,37 +783,104 @@
 
 
 //form //impppppp
-import {useState} from "react";
+// import {useState} from "react";
 
-const App=()=>{
-  const[input,setInput]=useState({});
+// const App=()=>{
+//   const[input,setInput]=useState({});
 
-  const handleInput=(e)=>{
-  let name=e.target.name;
-  let value=e.target.value;
+//   const handleInput=(e)=>{
+//   let name=e.target.name;
+//   let value=e.target.value;
 
-  setInput(values=>({...values,[name]:value}))
-  console.log(input)
-  }
+//   setInput(values=>({...values,[name]:value}))
+//   console.log(input)
+//   }
  
-  return(
-    <>
-    <h1>Application form</h1>
-    rollno: <input type="text" name="rollno" onChange={handleInput}/>
-    <br />
-    name: <input type="text" name="name" onChange={handleInput} />
+//   return(
+//     <>
+//     <h1>Application form</h1>
+//     rollno: <input type="text" name="rollno" onChange={handleInput}/>
+//     <br />
+//     name: <input type="text" name="name" onChange={handleInput} />
 
-    <br />
+//     <br />
 
-    <br />
-    city: <input type="text" name="city" onChange={handleInput} />
+//     <br />
+//     city: <input type="text" name="city" onChange={handleInput} />
 
-    <br />
-    fees: <input type="text" name="fees" onChange={handleInput} />
+//     <br />
+//     fees: <input type="text" name="fees" onChange={handleInput} />
 
-    <button >Save!!</button>
+//     <button >Save!!</button>
 
-    </>
-  )
-}
+//     </>
+//   )
+// }
+// export default App;
+
+
+// form with bakend (json file name db.json)
+// import {useState} from "react";
+// import axios from "axios";
+// const App=()=>{
+// const[input,setInput]=useState({});
+// const handleInput=(e)=>{
+// let name=e.target.name;
+// let value=e.target.value;
+// setInput(values=>({...values,[name]:value}))
+//   console.log(input)
+
+// }
+
+// const handlesubmit=async()=>{
+//   let api="http://localhost:3000/Student";
+// const response=await axios.post(api,input);
+// alert("data saved")
+// }
+//   return(
+//     <>
+//     <h1>Application form</h1>
+//     rollno: <input type="text" name="rollno" onChange={handleInput}/>
+//     <br />
+//     name: <input type="text" name="name" onChange={handleInput} />
+
+//     <br />
+
+//     <br />
+//     city: <input type="text" name="city" onChange={handleInput} />
+
+//     <br />
+//     fees: <input type="text" name="fees" onChange={handleInput} />
+
+//     <button onClick={handlesubmit} >Save!!</button>
+
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+// Projj
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./pages/Home";
+import Inser from "./pages/Inser";
+import Display from "./pages/Display";
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Home" element={<Home />} />
+          <Route path="Inser" element={<Inser />} />
+          <Route path="Display" element={<Display />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
 export default App;

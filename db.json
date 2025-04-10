@@ -1,0 +1,18 @@
+{
+  "Student": [
+    {
+      "empno": "1",
+      "name": "ishika",
+      "desgination": "developer",
+      "salary": 10000,
+      "id": "341a"
+    },
+    {
+      "id": "2337",
+      "empno": "123",
+      "name": "d",
+      "desgnation": "dev",
+      "salary": "1098723"
+    }
+  ]
+}
