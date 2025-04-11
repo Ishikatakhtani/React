@@ -861,26 +861,31 @@
 
 
 
-// Projj
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import Inser from "./pages/Inser";
-import Display from "./pages/Display";
+// Projj1 for form control [pages are in pages file]
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Layout from "./Layout";
+// import Home from "./pages/Home";
+// import Inser from "./pages/Inser";
+// import Display from "./pages/Display";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="Inser" element={<Inser />} />
-          <Route path="Display" element={<Display />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-};
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Layout />}>
+//           <Route index element={<Home />} />
+//           <Route path="Home" element={<Home />} />
+//           <Route path="Inser" element={<Inser />} />
+//           <Route path="Display" element={<Display />} />
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// };
 
-export default App;
+// export default App;
+
+
+
+//  form control it also has delete update etc [pages are in pages2]
+

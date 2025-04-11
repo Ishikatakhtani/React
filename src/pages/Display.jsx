@@ -1,42 +1,50 @@
 import axios from "axios";
-import{useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const Display=()=>{
-    const [mydata ,setMydata]=useState({});
-    const loadData=async()=>{
-        let api="http://localhost:3000/Student";
-        const response=await axios.get(api);
-        console.log(response.data);
-        setMydata(response.data)
-    }
-    useEffect(()=>{
+const Display = () => {
+    const [myData, setMyData] = useState([]);
+
+    const loadData = async () => {
+        const api = "http://localhost:3000/Student";
+        try {
+            const response = await axios.get(api);
+            setMyData(response.data);
+        } catch (error) {
+            console.error("Error loading data:", error);
+        }
+    };
+
+    useEffect(() => {
         loadData();
-    },[]);
-    const ans=mydata.map((key)=>{
-        return(
-            <>
-            <tr>
-                <td>{key.empno}</td>
-                <td>{key.name}</td>
-                <td>{key.desgnation}</td>
-                <td>{key.salary}</td>
-            </tr>
-            </>
-        )
-    })
+    }, []);
 
-    return(
-        <>
-        <h1>Display Page</h1>
-        <table>
-            <tr>
-                <th>EmpNo</th>
-                <th>Name</th>
-                <th>Desgnation</th>
-                <th>Salary</th>
-            </tr>
-        </table>
-        </>
-    )
-}
-export default Display
+    return (
+        <div className="container mt-5">
+            <h2 className="mb-4 text-center">Employee Data</h2>
+            <div className="table-responsive">
+                <table className="table table-bordered table-striped table-hover shadow">
+                    <thead className="table-dark">
+                        <tr>
+                            <th>Emp No</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {myData.map((emp, index) => (
+                            <tr key={index}>
+                                <td>{emp.empno}</td>
+                                <td>{emp.name}</td>
+                                <td>{emp.desgnation}</td>
+                                <td>{emp.salary}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    );
+};
+
+export default Display;
