@@ -3,7 +3,7 @@
     {
       "empno": "1",
       "name": "ishika",
-      "desgination": "developer",
+      "desgnation": "developer",
       "salary": 10000,
       "id": "341a"
     },
@@ -34,6 +34,17 @@
       "name": "pari",
       "desgnation": "ui",
       "salary": "1234"
+    },
+    {
+      "id": "b9ed",
+      "empno": "12",
+      "name": "Ishika Takhtani",
+      "designation": "web dev",
+      "salary": "12345678"
+    },
+    {
+      "id": "9c15",
+      "desgnation": "developer"
     }
   ]
 }

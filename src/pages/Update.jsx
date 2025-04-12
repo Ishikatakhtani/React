@@ -1,7 +1,7 @@
 import m from "../images/emp2.jpg";
 
 
-const Home = () => {
+const Update = () => {
   return (
     <div
     style={{
@@ -12,10 +12,10 @@ const Home = () => {
       textAlign: "center",
     }}
   >
-    <h1 style={{ color: "black" }}>Home Page</h1>
+    <h1 style={{ color: "black" }}>Update Page</h1>
     <img src={m} alt="home" style={{ Width: "600px", height: "400px" }} />
   </div>
   );
 };
 
-export default Home;
+export default Update;
