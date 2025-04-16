@@ -863,98 +863,99 @@
 
 // Projj1 for form control [pages are in pages file]
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import Inser from "./pages/Inser";
-import Display from "./pages/Display";
-import Update from "./pages/Update";
-
-import Container from 'react-bootstrap/Container';
- import Nav from 'react-bootstrap/Nav';
- import Navbar from 'react-bootstrap/Navbar';
-
-const App = () => {
-  return (
-    <BrowserRouter>
-     <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-          
-            <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-              <Nav.Link as={Link} to="/Inser">Insert</Nav.Link>
-             <Nav.Link as={Link} to="/Display">Display</Nav.Link>
-              <Nav.Link as={Link} to="/Update">Update</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <br />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="Inser" element={<Inser />} />
-          <Route path="Display" element={<Display />} />
-          <Route path="Update" element={<Update />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-};
-
- export default App;
-
-
-
-//  form control it also has delete update etc [pages are in pages2]
-
 // import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 // import Layout from "./Layout";
+// import Home from "./pages/Home";
+// import Inser from "./pages/Inser";
+// import Display from "./pages/Display";
+// import Update from "./pages/Update";
 
-// import Home from "./crudpages/Home";
-// import Insert from "./crudpages/Insert";
-// import Display from "./crudpages/Display";
-// import Update from "./crudpages/Update";
-// import Contact from "./crudpages/Contact";
 // import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// const App=()=>{
-//     return(
-//         <>
-//          <BrowserRouter>
-       
-//        <Navbar bg="primary" data-bs-theme="dark" expand="lg">
-//          <Container>
-//            <Navbar.Brand as={Link} to="/">REACT</Navbar.Brand>     
-//            <Nav className="me-auto">
-//              <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-//              <Nav.Link as={Link} to="/Insert">Insert</Nav.Link>
-//              <Nav.Link as={Link} to="/Display">Display</Nav.Link>
-//              <Nav.Link as={Link} to="/Update">Update</Nav.Link>
-// <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
-//            </Nav>
-//          </Container>
-//        </Navbar>
+//  import Nav from 'react-bootstrap/Nav';
+//  import Navbar from 'react-bootstrap/Navbar';
 
-       
-//        <Routes>
-//          <Route path="/" element={<Layout />}>
-//            <Route index element={<Home />} />
-//            <Route path="Home" element={<Home />} />
-//            <Route path="Insert" element={<Insert />} />
-//            <Route path="Display" element={<Display />} />
-//            <Route path="Update" element={<Update />} />
-// <Route path="Contact" element={<Contact />} />
-//          </Route>
-//        </Routes>
-//      </BrowserRouter>
-//         </>
-//     )
+// const App = () => {
+//   return (
+//     <>
+//     <BrowserRouter>
+//      <Navbar bg="dark" data-bs-theme="dark">
+//         <Container>
+//           <Navbar.Brand href="#home">Employee Managment</Navbar.Brand>
+//           <Nav className="me-auto">
+          
+//             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
+//               <Nav.Link as={Link} to="/Inser">Insert</Nav.Link>
+//              <Nav.Link as={Link} to="/Display">Display</Nav.Link>
+//               <Nav.Link as={Link} to="/Update">Update</Nav.Link>
+//           </Nav>
+//         </Container>
+//       </Navbar>
+//       <br />
+//       <Routes>
+//         <Route path="/" element={<Layout />}>
+//           <Route index element={<Home />} />
+//           <Route path="Home" element={<Home />} />
+//           <Route path="Inser" element={<Inser />} />
+//           <Route path="Display" element={<Display />} />
+//           <Route path="Update" element={<Update />} />
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+
+//     <footer style={{display: "flex",
+//       flexDirection: "column",
+//       justifyContent: "center",
+//       alignItems: "center",
+//       textAlign: "center",
+//       paddingTop:"30px"
+//       }}>
+//         <h4>
+// All rights reserved.2025 </h4>
+//     </footer>
+//     </>
+//   );
+// };
+
+//  export default App;
+
+
+
+//
+
+// import Comp1 from "./comp1";
+// import { useState } from "react";
+//  const {user,setuser}=useState("ishika");
+// const App=()=>{
+// return(
+//   <>
+//   <h1>Welcome</h1>
+//   <h1>{user}</h1>
+//   <Comp1 user={user}/>
+//   </>
+// )
+
+
 // }
 // export default App;
 
+// import Comp1 from "./Comp1";
+// import { useState, createContext } from "react";
+// const myContext=createContext();
+// const App=()=>{
+//   const [user,setUser]=useState("ishika");
+//   return(
+//     <>
+    
+//     <h1>Welcome {user}</h1>
+//     <button onClick={()=>{setUser("isdfghj")}}>click</button>
+//     <myContext.Provider value={(user,setUser)}>
+//   <Comp1/>
+//     </myContext.Provider>
+//     </>
+//   )
+// }
+// export default App;
+// export{myContext};
 
 
