@@ -11,6 +11,18 @@ import App from './App.jsx'
 //linking bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
+// import UserContext from './UserContext.jsx';
+
+import LoginContext from './LoginContext.jsx';
+
 createRoot(document.getElementById('root')).render(
-    <App />
+    // <UserContext>
+    // <App />
+    // </UserContext>
+
+    <LoginContext>
+        <App />
+    </LoginContext>
 )

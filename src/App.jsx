@@ -934,10 +934,11 @@
 //   <Comp1 user={user}/>
 //   </>
 // )
-
-
 // }
 // export default App;
+
+
+
 
 // import Comp1 from "./Comp1";
 // import { useState, createContext } from "react";
@@ -947,9 +948,9 @@
 //   return(
 //     <>
     
-//     <h1>Welcome {user}</h1>
-//     <button onClick={()=>{setUser("isdfghj")}}>click</button>
-//     <myContext.Provider value={(user,setUser)}>
+//     <h1>Welcome  to cybrom :{user}</h1>
+//     <button onClick={()=>{setUser("varsha")}}>click</button>
+//     <myContext.Provider value={{user,setUser}}>
 //   <Comp1/>
 //     </myContext.Provider>
 //     </>
@@ -959,3 +960,59 @@
 // export{myContext};
 
 
+
+
+//children is used if we use contanier tag for component  
+//only uses comp6 
+// import Comp6 from "./Comp6";
+// import { useState, createContext } from "react";
+// const myContext=createContext();
+// const App=()=>{
+//   const [user,setUser]=useState("ishika");
+//   return(
+//     <>
+    
+//     <h1>Welcome  to cybrom </h1>
+   
+//     <myContext.Provider value={{user,setUser}}>
+//   <Comp6>
+//     children
+//     </Comp6>
+//     </myContext.Provider>
+//     </>
+//   )
+// }
+// export default App;
+// export{myContext};
+
+
+
+// THIS USES COMP7 AND USERCONTEXT.JSX
+// import Comp7 from "./Comp7";
+// const App=()=>{
+//   return(
+//     <>
+//     <h1>Welcome</h1>
+//     <Comp7/>
+//     </>
+//   )
+// }
+// export default App;
+
+//LOGIN SYSTEM
+//THIS USES  LOGINCONTEXT,
+
+import AuthApp from "./AuthApp";
+import UnAuthApp from "./UnAuthApp";
+import { useContext } from "react";
+import { myContext } from "./LoginContext";
+const App=()=>{
+  const {user}= useContext(myContext);
+  return (
+    <>
+    <h1>Login</h1>
+    {user.auth ? <AuthApp/> : <UnAuthApp/>}
+    </>
+  )
+}
+export default App;

@@ -9,3 +9,5 @@ const comp2=({user})=>{
     )
 }
 export default comp2;
+
+
