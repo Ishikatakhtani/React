@@ -1002,16 +1002,117 @@
 //LOGIN SYSTEM
 //THIS USES  LOGINCONTEXT,
 
-import AuthApp from "./AuthApp";
-import UnAuthApp from "./UnAuthApp";
-import { useContext } from "react";
-import { myContext } from "./LoginContext";
+// import AuthApp from "./AuthApp";
+// import UnAuthApp from "./UnAuthApp";
+// import { useContext } from "react";
+// import { myContext } from "./LoginContext";
+// const App=()=>{
+//   const {user}= useContext(myContext);
+//   return (
+//     <>
+//     <h1>Login</h1>
+//     {user.auth ? <AuthApp/> : <UnAuthApp/>}
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+//Useref HOOK 
+//used for DOM manipulation 
+// import { useRef } from "react";
+
+// const App=()=>{
+//   const myref= useRef();
+//   console.log(myref);
+
+//   const myDisplay=()=>{
+// myref.current.style.border="3px solid red";
+// myref.current.style.width="200px";
+// myref.current.style.backgroundColor="orange";
+// myref.current.style.borderRadius="20px";
+// myref.current.style.padding="30px";
+//   }
+//   return(
+//     <>
+//     <h1>hello</h1>
+//     <button onClick={myDisplay}>Click </button>
+//     <div ref={myref}>
+// Using useref Hook
+//     </div>
+//     </>
+//   )
+// }
+// export default App;
+
+//Useref HOOK 
+// import { useRef } from "react";
+// const App=()=>{
+//   const myRef=useRef("");
+
+// const display=()=>{
+//   myRef.current.innerHTML="We learn UseRef hook in react";
+// }
+//   return(
+//     <>
+//     <h1 ref={myRef}>welcome</h1>
+//     <button onClick={display}>Click here</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//Useref Hook 
+
+// import { useEffect, useRef, useState } from "react";
+//  const App=()=>{
+
+//   const [name, setName] = useState(" ");
+
+//   const myref = useRef(0);
+//   useEffect(()=>{
+//     myref.current+=1;
+//   })
+//   return(
+//     <>
+//     enter name : <input type="text" value={name}  onChange={(e)=>{setName(e.target.value)}}/>
+//     <h1>Rendering count : {myref.current} </h1>
+//     </>
+//   )
+//  }
+//  export default App;
+
+ import { useRef } from "react";
+
 const App=()=>{
-  const {user}= useContext(myContext);
-  return (
+  const myref= useRef();
+  console.log(myref);
+
+  const myDisplay=()=>{
+    myref.current.style.textAlign="center"
+    myref.current.style.padding="30px";
+    myref.current.style.width="200px";
+    myref.current.style.FontSize="30px";
+    myref.current.style.textAlign="center";
+myref.current.style.backgroundColor="orange";
+  }
+  const Dis=()=>{
+    myref.current.innerHTML="Welcome to cybrom";
+      }
+      const Di=()=>{
+        myref.current.style.borderRadius="70px";
+        myref.current.style.border="3px";
+          }
+  return(
     <>
-    <h1>Login</h1>
-    {user.auth ? <AuthApp/> : <UnAuthApp/>}
+    
+    <button onClick={myDisplay}>Background </button>
+    <button onClick={Dis}>Text</button>
+    <button onClick={Di}>boderRadius</button>
+    <div ref={myref} style={{textAlign:"center", fontSize:"50px"}}>
+Using useref Hook
+    </div>
     </>
   )
 }
