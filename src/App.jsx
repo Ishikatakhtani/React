@@ -1,5 +1,7 @@
 // TOPIC 1
 
+// const { useReducer } = require("react")
+
 // const { useState } = require("react")
 // const { use } = require("react")
 
@@ -1083,37 +1085,130 @@
 //  }
 //  export default App;
 
- import { useRef } from "react";
+//  import { useRef } from "react";
+
+// const App=()=>{
+//   const myref= useRef();
+//   console.log(myref);
+
+//   const myDisplay=()=>{
+//     myref.current.style.textAlign="center"
+//     myref.current.style.padding="30px";
+//     myref.current.style.width="200px";
+//     myref.current.style.FontSize="30px";
+//     myref.current.style.textAlign="center";
+// myref.current.style.backgroundColor="orange";
+//   }
+//   const Dis=()=>{
+//     myref.current.innerHTML="Welcome to cybrom";
+//       }
+//       const Di=()=>{
+//         myref.current.style.borderRadius="70px";
+//         myref.current.style.border="3px";
+//           }
+//   return(
+//     <>
+    
+//     <button onClick={myDisplay}>Background </button>
+//     <button onClick={Dis}>Text</button>
+//     <button onClick={Di}>boderRadius</button>
+//     <div ref={myref} style={{textAlign:"center", fontSize:"50px"}}>
+// Using useref Hook
+//     </div>
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+
+
+//useReducer  //IMP
+// import { useReducer } from "react"
+// const App=()=>{
+
+//     const reducerMethod=(state,action)=>{
+// switch(action){
+//     case"Increment":
+//     return state+1;
+//     case "Decrement":
+//         return state-1;
+//         default:
+//         return state;
+// }
+//     }
+
+//     const[count,dispatch]=useReducer(reducerMethod,0)
+//     return(
+//         <>
+//         <h1>
+//           Using useReducer Hook
+//         </h1>
+//         <button onClick={()=>{dispatch("Increment")}}>Increment</button>
+//         <h1>Count : {count}</h1>
+//         <button onClick={()=>{dispatch("Decrement")}}>Decrement</button>
+//         </>
+//     )
+// }
+// export default App;
+
+
+// import { useReducer } from "react";
+// const App=()=>{
+//   const myReducer=( state , action)=>{
+
+//     switch(action)
+//     {
+//       case "GREEN":
+//         return state ="green";
+//         case "RED":
+//           return state = "red";
+//           case "BLUE":
+//             return state = "blue";
+//             default:
+//               return state;
+//     }
+//   }
+
+
+//   const [color, dispatch]= useReducer (myReducer, "yellow");
+// return(
+//   <>
+//   <h1>welcome</h1>
+//   <button onClick={()=>{dispatch("RED")}}>REd</button>
+//   <button onClick={()=>{dispatch("GREEN")}}>GREEN</button>
+//   <button onClick={()=>{dispatch("BLUE")}}>BLUE</button>
+//   <div style={{width:"300px", height:"200px", backgroundColor:color}}></div>
+//   </>
+// )
+// }
+// export default App;
+
+
+//Use memoHook  //imppp
+
+import { useState ,useMemo} from "react";
 
 const App=()=>{
-  const myref= useRef();
-  console.log(myref);
-
-  const myDisplay=()=>{
-    myref.current.style.textAlign="center"
-    myref.current.style.padding="30px";
-    myref.current.style.width="200px";
-    myref.current.style.FontSize="30px";
-    myref.current.style.textAlign="center";
-myref.current.style.backgroundColor="orange";
-  }
-  const Dis=()=>{
-    myref.current.innerHTML="Welcome to cybrom";
-      }
-      const Di=()=>{
-        myref.current.style.borderRadius="70px";
-        myref.current.style.border="3px";
-          }
-  return(
-    <>
-    
-    <button onClick={myDisplay}>Background </button>
-    <button onClick={Dis}>Text</button>
-    <button onClick={Di}>boderRadius</button>
-    <div ref={myref} style={{textAlign:"center", fontSize:"50px"}}>
-Using useref Hook
-    </div>
-    </>
-  )
+    const[add,setAdd]=useState(0);
+    const[sub,setSub]=useState(100);
+const myMulti =useMemo(()=>{
+    console.log("***************");
+    return add*2;
+},[add]);
+    function multiply(){
+        
+    }
+    return(
+        <>
+        <h1>Welcome</h1>
+        <h1>multiplication :{myMulti}</h1>
+        <button onClick={()=>{setAdd(add+1)}}>INC </button>
+        <h3>INC :{add}</h3>
+        <button onClick={()=>{setSub(sub-1)}}>DEC</button>
+        <h3>Dec :{sub}</h3>
+        </>
+    )
 }
 export default App;
