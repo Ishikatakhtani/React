@@ -1187,28 +1187,44 @@
 
 
 //Use memoHook  //imppp
+// import { useState ,useMemo} from "react";
 
-import { useState ,useMemo} from "react";
-
-const App=()=>{
-    const[add,setAdd]=useState(0);
-    const[sub,setSub]=useState(100);
-const myMulti =useMemo(()=>{
-    console.log("***************");
-    return add*2;
-},[add]);
-    function multiply(){
+// const App=()=>{
+//     const[add,setAdd]=useState(0);
+//     const[sub,setSub]=useState(100);
+// const myMulti =useMemo(()=>{
+//     console.log("***************");
+//     return add*2;
+// },[add]);
+//     function multiply(){
         
-    }
-    return(
-        <>
-        <h1>Welcome</h1>
-        <h1>multiplication :{myMulti}</h1>
-        <button onClick={()=>{setAdd(add+1)}}>INC </button>
-        <h3>INC :{add}</h3>
-        <button onClick={()=>{setSub(sub-1)}}>DEC</button>
-        <h3>Dec :{sub}</h3>
-        </>
-    )
+//     }
+//     return(
+//         <>
+//         <h1>Welcome</h1>
+//         <h1>multiplication :{myMulti}</h1>
+//         <button onClick={()=>{setAdd(add+1)}}>INC </button>
+//         <h3>INC :{add}</h3>
+//         <button onClick={()=>{setSub(sub-1)}}>DEC</button>
+//         <h3>Dec :{sub}</h3>
+//         </>
+//     )
+// }
+// export default App;
+
+
+
+import AuthApp from "./AuthApp";
+import UnAuthApp from "./UnAuthApp";
+import { useContext } from "react";
+import { myContext } from "./LoginContext";
+const App=()=>{
+  const {user}= useContext(myContext);
+  return (
+    <>
+    <h1>Login</h1>
+    {user.auth ? <AuthApp/> : <UnAuthApp/>}
+    </>
+  )
 }
 export default App;
